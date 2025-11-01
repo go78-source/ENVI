@@ -1,0 +1,26 @@
+{
+  "name": "ExtractYearFromDate",
+  "display_name": "Extract Year From Date",
+  "description": "Convert a datetime string (e.g., acquisition_time) into an integer year.",
+  "schema": "envitask_3.0",
+  "routine": "ExtractYearFromDate",
+  "base_class": "ENVITaskFromProcedure",
+  "parameters": [
+    {
+      "name": "INPUT_DATETIME",
+      "display_name": "Input Date/Time",
+      "type": "STRING",
+      "direction": "INPUT",
+      "required": true,
+      "description": "Datetime string, e.g., 2021-07-11T00:00:00"
+    },
+    {
+      "name": "OUTPUT_YEAR",
+      "display_name": "Year",
+      "type": "LONG",
+      "direction": "OUTPUT",
+      "required": true,
+      "description": "Integer year parsed from INPUT_DATETIME"
+    }
+  ]
+}
