@@ -1,0 +1,7 @@
+Get-ChildItem *.laz | ForEach-Object {
+    pdal info $_.FullName --summary
+}
+
+
+##this is kind of bad and slow but works in a pinch after you spend an entire day downloading .laz files only for 9/3000 of them to have unreadble headers.
+##Just run in powershell pointed to whatever folder .laz is in. // attemps to read all headers, prints filename in red and moves on when it cant. 

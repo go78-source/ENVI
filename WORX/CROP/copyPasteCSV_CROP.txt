@@ -1,0 +1,30 @@
+(base) PS C:\Users\TEMP> # --- PATHS ---
+>> $csvPath   = "C:\Users\TEMP\Downloads\in_tile_filenames.csv"
+>> $srcFolder = "E:\TRANSFER\SERRA1\idk"
+>> $outFolder = "E:\TRANSFER\SERRA1\idk\filtered_tiles"
+>>
+>> # Create output
+>> New-Item -ItemType Directory -Force -Path $outFolder | Out-Null
+>>
+>> # Load raw lines as strings (not objects)
+>> $codes = Get-Content $csvPath | ForEach-Object { $_.Trim() -replace ".laz","" }
+>>
+>> # Get files in source
+>> $allFiles = Get-ChildItem $srcFolder -Filter *.laz
+>>
+>> foreach ($code in $codes) {
+>>     # Match based on substring
+>>     $matches = $allFiles | Where-Object { $_.Name -like "*$code*" }
+>>
+>>     if ($matches) {
+>>         foreach ($m in $matches) {
+>>             Copy-Item $m.FullName -Destination $outFolder -Force
+>>             Write-Host "MATCHED → $($m.Name)"
+>>         }
+>>     }
+>>     else {
+>>         Write-Host "NO MATCH FOR → $code" -ForegroundColor Red
+>>     }
+>> }
+>>
+>> Write-Host "DONE."

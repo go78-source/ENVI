@@ -1,0 +1,25 @@
+LIDAR/
+├── RAW/
+│   ├── CA_SierraNevada_4_2022/
+│   └── CampFire_2018/
+│
+├── clean_laz/
+├── smrf_classified/
+├── DTM_tiles/
+│   ├── *_DTM.tif
+│   └── logs/
+└── Scripts/
+    ├── remove_duplicate_names.ps1
+    ├── remove_duplicate_hash.ps1
+    ├── validate_headers.ps1
+    ├── run_smrf_classification.ps1
+    ├── run_dtm_loop.bat
+    ├── dtm_single.json
+
+//////////////////////
+
+FIX
+
+
+Reticulate into R for PYTHON LLM
+

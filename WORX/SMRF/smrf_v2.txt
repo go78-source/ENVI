@@ -1,0 +1,8 @@
+run_smrf_full_parallelV2
+I think it depends on how PDAL is installed on your PC. On my main computer I (probably incorrectly) set conda / PDAL as path in environment. In this PC however conda is properly establishing a temp environment in powershell, thus requiring a new PDAL environment to be called upon each time a powershell -ExecutionPolicy Bypass .ps1 job is started. 
+This version has a variable defined for the system pdal path to be called in the in the startjob -> pipeline scriptblock.
+
+the "v1" does not have pdal defined like at all. probably wont work on ur system. If it works itll work really really well so. idk. Ensure that ur in a good env. 
+Probably call on powershell from inside anaconda instead of the other way around.
+
+SMRF (Simple Morphological Filter) was used because USGS tiles contained mixed ground/non-ground classes and required reprocesing.
