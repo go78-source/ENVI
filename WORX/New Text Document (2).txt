@@ -1,0 +1,20 @@
+SIERRANEVADA 4
+
+Initial tiles: 10,748
+Removed duplicates (filename): 0
+Removed duplicates (SHA256): 3,955
+Bad tiles removed (header errors): 0
+Final tiles used: 6,793 Files
+
+SIERRANEVADA 1 (NEED TO CHECK DUPLICATES WHEN DONE WITH DTM)
+
+Initial tiles: 3246
+Removed duplicates (filename): 
+Removed duplicates (SHA256): 
+Bad tiles removed (header errors): 11
+Bad tiles redownloaded: 11
+Tiles Removed (crop): 1829
+Final tiles used: 1417
+
+CAMPFIRE:
+
